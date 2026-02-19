@@ -19,7 +19,7 @@ function ResponsiveBand() {
 
 export default function Card(){
     return (
-       <Canvas   style={{ width: '100%', height: '100%', pointerEvents: 'auto' }}  gl={{alpha:true}} camera={{ position: [0, 0, 13], fov: 25 }} >
+       <Canvas   style={{ width: '100%', height: '100%', pointerEvents: 'auto', touchAction: 'none' }}  gl={{alpha:true}} camera={{ position: [0, 0, 13], fov: 25 }} >
          <ambientLight intensity={Math.PI} />
          <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>
            <ResponsiveBand />
@@ -72,6 +72,8 @@ export function Band(){
             return () => void (document.body.style.cursor = 'auto')
          }
   }, [hovered, dragged])
+
+    
   
       useFrame((state, delta)=>{
          if (!curve || !band.current || !fixed.current || !j1.current || !j2.current || !j3.current || !card.current) return
