@@ -25,8 +25,8 @@ export default function Prosjekter() {
             <CarouselContent>
               {projects.map((project, index) => (
                 <CarouselItem key={index}>
-                  <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl p-8 h-[66vh] sm:h-[70vh] flex flex-col justify-between">
-                    <a href="">
+                  <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl p-8 h-[50vh] sm:h-[70vh] flex flex-col justify-between">
+                    <a target="_blank" href={project.link}>
 
                     <img src={project.img}   />
                     </a>
