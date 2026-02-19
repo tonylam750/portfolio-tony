@@ -7,6 +7,8 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
 
 
 extend({ MeshLineGeometry, MeshLineMaterial })
+useGLTF.preload('./studenCard.glb')
+useTexture.preload('./band3.png')
 
 function ResponsiveBand() {
   const { width } = useThree((state) => state.size)
