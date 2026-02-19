@@ -4,13 +4,13 @@ import Card from './card';
 
 export default function HeroSection() {
   return (
-    <section className="bg-gradient-to-r from-black to-[#383737] relative min-h-screen w-full flex items-start px-10">
+    <section className=" pl-20 bg-gradient-to-r from-black to-[#383737]-20  relative min-h-screen w-full flex items-start px-10">
 
       <div className="absolute inset-0" style={{ pointerEvents: 'none' }}>
         <Card />
       </div>
 
-      <div className=" relative z-10 grid grid-cols-1 sm:grid-cols-10 items-start w-full gap-8 pointer-events-none">
+      <div className=" pl-0 sm:pl-18 relative z-10 grid grid-cols-1 sm:grid-cols-10 items-start w-full gap-8 pointer-events-none">
         <div className="pt-40 col-span-full sm:col-span-4 text-center sm:text-left pointer-events-auto">
           <h1 className="mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c11e38] to-[#220b34]">
