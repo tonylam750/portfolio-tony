@@ -9,6 +9,7 @@ import {
 
 
 const projects = [
+  { title: "NTIdrett", tech: "React Router, Sanity, typescript" , img: "./nti.png", link:"https://www.ntidrett.no/" },
   { title: "Studentmat", tech: "React, Claude API, javascript" , img: "./student.png", link:"https://github.com/tonylam750/StudentMat" },
   { title: "Labubu", tech: "React Router, Mirage.js, javascript" , img: "./labubu.png", link: "https://github.com/tonylam750/Labubus"},
   { title: "Rick n Morty",  tech: "Next.js, Typescript, tailwind" , img: "./rick.png", link:"https://github.com/tonylam750/rick-and-morty"},
@@ -35,8 +36,8 @@ export default function Prosjekter() {
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-emerald-500">{project.tech}</span>
                   <div className="flex gap-2">
-                    <CarouselPrevious style={{ position: 'static', transform: 'none' }} className="bg-[#2a2a2a] border-white/10 text-white hover:bg-white/10" />
-                    <CarouselNext style={{ position: 'static', transform: 'none' }} className="bg-[#2a2a2a] border-white/10 text-white hover:bg-white/10" />
+                    <CarouselPrevious style={{ position: 'static', transform: 'none' }} className="w-14 h-14 bg-[#2a2a2a] border-white/10 text-white hover:bg-white/10" />
+                    <CarouselNext style={{ position: 'static', transform: 'none' }} className="w-14 h-14 bg-[#2a2a2a] border-white/10 text-white hover:bg-white/10" />
                   </div>
                 </div>
               </div>
