@@ -14,10 +14,11 @@ export default function Prosjekter() {
   <div className="relative z-10 max-w-6xl mx-auto">
 
     <div className="mb-12 sm:mb-16 text-center sm:text-left">
-      <span className="inline-flex items-center px-3 py-1 mb-4 rounded-full border border-white/15 bg-white/5 text-xs sm:text-sm font-medium text-white/80">
+      <span className="inline-flex items-center gap-2 mb-4 text-xs sm:text-sm font-bold uppercase tracking-[0.3em] text-[#e0567a] justify-center sm:justify-start">
+        <span className="h-1.5 w-1.5 rounded-full bg-[#e0567a]" />
         Portefølje
       </span>
-      <h1 className="mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+      <h1 className="mb-4 font-black uppercase text-4xl sm:text-5xl lg:text-6xl">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#c11e38] to-[#220b34]">
           Mine prosjekter
         </span>
@@ -40,6 +41,7 @@ export default function Prosjekter() {
             />
           </a>
           <div className="p-5 flex flex-col gap-3 flex-1">
+            <span className="text-xs font-bold tracking-widest text-white/30">0{index + 1}</span>
             <h3 className="text-lg font-bold">{project.title}</h3>
             <p className="text-white/60 text-sm leading-relaxed line-clamp-2">{project.desc}</p>
             <div className="flex flex-wrap gap-1.5">
@@ -55,7 +57,7 @@ export default function Prosjekter() {
             <a
               target="_blank"
               href={project.link}
-              className="mt-auto pt-2 inline-flex items-center gap-1.5 w-fit text-sm font-medium px-3.5 py-1.5 rounded-full bg-gradient-to-br from-[#c11e38] to-[#220b34] hover:opacity-90 transition-opacity"
+              className="mt-auto pt-2 inline-flex items-center gap-1.5 w-fit text-xs font-bold uppercase tracking-wide px-3.5 py-1.5 rounded-full bg-gradient-to-br from-[#c11e38] to-[#220b34] hover:opacity-90 transition-opacity"
             >
               Se prosjekt <ArrowUpRight size={14} />
             </a>

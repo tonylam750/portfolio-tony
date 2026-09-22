@@ -31,6 +31,11 @@ body,
     filter: blur(40px);
 }
 
+.bg-glow-purple {
+    background: radial-gradient(circle, rgba(34,11,52,0.55) 0%, rgba(34,11,52,0) 70%);
+    filter: blur(50px);
+}
+
 @keyframes bounce-y {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(8px); }
