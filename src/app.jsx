@@ -10,9 +10,9 @@ export default function App(){
     const projectsRef = useRef(null)
     return(
     <>
-      <NavBar projectsRef={projectsRef} /> 
-      <HeroSection/>
-      
+      <NavBar projectsRef={projectsRef} />
+      <HeroSection projectsRef={projectsRef}/>
+
      <div ref={projectsRef}>
             <Prosjekter />
           </div>
