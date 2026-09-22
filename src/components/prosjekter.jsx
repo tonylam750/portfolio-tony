@@ -39,35 +39,40 @@ export default function Prosjekter() {
         <CarouselContent>
           {projects.map((project, index) => (
             <CarouselItem key={index}>
-             <div className="group bg-[#1a1a1a] border border-white/10 rounded-2xl p-6 sm:p-8 flex flex-col gap-5 justify-between transition-transform duration-300 hover:-translate-y-1 hover:border-white/20">
-                <a target="_blank" href={project.link} className="block overflow-hidden rounded-lg">
+              <div className="group bg-[#1a1a1a] border border-white/10 rounded-2xl overflow-hidden shadow-xl shadow-black/30 transition-all duration-300 hover:-translate-y-1 hover:border-white/20 hover:shadow-2xl hover:shadow-black/50">
+                <a target="_blank" href={project.link} className="block overflow-hidden">
                   <img
                     src={project.img}
-                    className="w-full h-48 sm:h-64 object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-48 sm:h-64 object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </a>
-                <div>
-                  <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
+                <div className="p-6 sm:p-8 flex flex-col gap-4">
+                  <h3 className="text-2xl font-bold">{project.title}</h3>
                   <p className="text-white/60 text-sm sm:text-base">{project.desc}</p>
-                </div>
-                <div className="flex items-center justify-between gap-4">
-                  <span className="text-xs sm:text-sm text-emerald-500">{project.tech}</span>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.split(", ").map((t) => (
+                      <span
+                        key={t}
+                        className="px-2.5 py-1 rounded-full text-xs border border-white/10 bg-white/5 text-white/60"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                   <a
                     target="_blank"
                     href={project.link}
-                    className="shrink-0 inline-flex items-center gap-1 text-sm font-medium px-3 py-1.5 rounded-full border border-white/15 hover:bg-white/10 transition-colors"
+                    className="mt-1 inline-flex items-center justify-center gap-1.5 w-fit text-sm font-medium px-4 py-2 rounded-full bg-gradient-to-br from-[#c11e38] to-[#220b34] hover:opacity-90 transition-opacity"
                   >
                     Se prosjekt <ArrowUpRight size={16} />
                   </a>
-                </div>
-                <div className="flex items-center justify-end gap-2">
-                  <CarouselPrevious style={{ position: 'static', transform: 'none' }} className="w-12 h-12 bg-[#2a2a2a] border-white/10 text-white hover:bg-white/10" />
-                  <CarouselNext style={{ position: 'static', transform: 'none' }} className="w-12 h-12 bg-[#2a2a2a] border-white/10 text-white hover:bg-white/10" />
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
+        <CarouselPrevious className="hidden sm:flex -left-4 lg:-left-12 bg-black/50 backdrop-blur border-white/10 text-white hover:bg-black/70" />
+        <CarouselNext className="hidden sm:flex -right-4 lg:-right-12 bg-black/50 backdrop-blur border-white/10 text-white hover:bg-black/70" />
       </Carousel>
 
       <div className="flex items-center justify-center gap-2 mt-5">

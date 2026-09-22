@@ -10,7 +10,7 @@ export default function HeroSection({ projectsRef }) {
   }
 
   return (
-    <section className="pl-20 bg-gradient-to-r from-black to-[#383737]-20 relative min-h-screen w-full flex items-start px-10 overflow-hidden">
+    <section className="pl-20 bg-gradient-to-r from-black to-[#383737]-20 relative min-h-screen w-full flex items-start sm:items-center px-10 overflow-hidden">
 
       <div className="absolute -top-32 -left-32 w-[28rem] h-[28rem] bg-glow rounded-full pointer-events-none" />
 
@@ -18,8 +18,8 @@ export default function HeroSection({ projectsRef }) {
         <Card />
       </div>
 
-      <div className=" pl-0 sm:pl-18 relative z-10 grid grid-cols-1 sm:grid-cols-10 items-start w-full gap-8 pointer-events-none">
-        <div className="pt-40 col-span-full sm:col-span-4 text-center sm:text-left pointer-events-auto rounded-2xl bg-black/45 sm:bg-transparent backdrop-blur-sm sm:backdrop-blur-none p-5 -mx-2 sm:p-0 sm:mx-0">
+      <div className=" pl-0 sm:pl-18 relative z-10 grid grid-cols-1 sm:grid-cols-10 items-start sm:items-center w-full gap-8 pointer-events-none">
+        <div className="pt-40 sm:pt-0 col-span-full sm:col-span-4 text-center sm:text-left pointer-events-auto rounded-2xl bg-black/45 sm:bg-transparent backdrop-blur-sm sm:backdrop-blur-none p-5 -mx-2 sm:p-0 sm:mx-0">
           <span className="inline-flex items-center gap-2 mb-5 px-3 py-1 rounded-full border border-white/15 bg-white/5 text-xs sm:text-sm font-medium text-white/80">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
