@@ -11,7 +11,7 @@ export default function App(){
     return(
     <>
       <NavBar projectsRef={projectsRef} /> 
-      <HeroSection/>
+      <HeroSection projectsRef={projectsRef}/>
       
      <div ref={projectsRef}>
             <Prosjekter />

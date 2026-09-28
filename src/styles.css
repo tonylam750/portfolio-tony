@@ -11,13 +11,19 @@ body,
     left: 0;
     width: 100%;
     height: 100%;
-   
-    background-image: linear-gradient(to right,  black 0%, #383737 100%);
+
+    background-color: #F2502E;
     color: white;
      overflow-y: auto;
+     scroll-behavior: smooth;
 
-    
-    
+
+
+}
+
+::selection {
+    background: #1A1024;
+    color: #F6C445;
 }
 
 
